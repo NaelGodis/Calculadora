@@ -26,7 +26,7 @@ operation = input('''Please type in the mach operation you wold like to complete
 ''')
 
 number_1 = int(input('Enter your first number:'))
-number_2 = int(input('Enter your first number:'))
+number_2 = int(input('Enter your  number:'))
 
 if operation == '+':
     print ('{} + {} =' .format(number_1,number_2))
@@ -46,3 +46,32 @@ elif operation == '/':
 
 else:
     print('You have not typed a valid operator, please run the programm again.')
+
+#o usuário deverá realizar novo cálcullo sem executar a aplicação novamente
+def calculate():
+    operation = input('''
+    Please type in the mach operation you wold like to complte:
+    + for addition
+- for subtraction
+* for multiplication
+/ for division
+    ''')
+
+
+
+#Add again() function to calculate() function
+    again()
+def again():
+    calc_again = input('''
+    Do you want to calculate again?
+    please type Y for YES or N for NO.
+    ''' )
+
+    if calc_again.upper() == 'Y':
+        calculate()
+    elif calc_again.upper() == 'N':
+        print('Se you later.')
+    else:
+        again()
+
+calculate()
